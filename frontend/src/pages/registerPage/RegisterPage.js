@@ -17,7 +17,7 @@ export function RegisterPage() {
     useEffect(() => {
         const fetchConferences = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/conferences/');
+                const response = await axios.get('http://127.0.0.1:8000/api/event-registration/conferences/');
                 setConferences(response.data.results);
             } catch (error) {
                 console.error('Error fetching conferences:', error);
@@ -53,7 +53,7 @@ export function RegisterPage() {
         }
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/conference_users/', formData, {
+            const response = await axios.post('http://127.0.0.1:8000/api/event-registration/users/', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
