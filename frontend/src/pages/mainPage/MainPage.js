@@ -46,11 +46,11 @@ export function MainPage() {
                 </div>
                 
                 {/* Slider of Gallery */}
-                {/* <div className={classes.gallery} id="gallery">
+                <div className={classes.gallery} id="gallery">
                     <div className={classes.container}>
                         <SliderGallery/>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );

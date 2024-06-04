@@ -38,7 +38,7 @@ export function SliderGallery() {
   const [selectedYear, setSelectedYear] = useState('All');
 
   useEffect(() => {
-    axios.get('http://localhost:8000/data')
+    axios.get('http://127.0.0.1:8000/api/gallery/images/')
       .then(response => {
         setImages(response.data);
         setFilteredImages(response.data);
