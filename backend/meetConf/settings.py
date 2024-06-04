@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     "event_registration.apps.EventRegistrationConfig",
     "gallery.apps.GalleryConfig",
     "rest_framework",
-    "corsheaders"
+    "corsheaders",
+    "pdf_storage.apps.PdfStorageConfig"
 ]
 
 # CORS_ALLOW_ALL_ORIGINS = True
