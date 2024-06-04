@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     "gallery.apps.GalleryConfig",
     "rest_framework",
     "corsheaders",
-    "pdf_storage.apps.PdfStorageConfig"
+    "pdf_storage.apps.PdfStorageConfig",
+    "events_sliders.apps.EventsSlidersConfig"
 ]
 
 # CORS_ALLOW_ALL_ORIGINS = True

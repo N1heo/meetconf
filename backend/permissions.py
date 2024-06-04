@@ -1,4 +1,4 @@
-from rest_framework.permissions import IsAdminUser, BasePermission
+from rest_framework.permissions import IsAdminUser, BasePermission, SAFE_METHODS
 
 
 class IsSuperUser(IsAdminUser):
@@ -19,5 +19,19 @@ class IsSuperUserOrPostOnly(BasePermission):
             return True
         # Allow regular users to only POST
         if request.method == 'POST':
+            return True
+        return False
+
+
+class IsSuperUserOrReadOnly(BasePermission):
+    """
+    Custom permission to allow superusers all actions, regular users can only read (GET, HEAD, OPTIONS).
+    """
+    def has_permission(self, request, view):
+        # Allow superusers all actions
+        if request.user and request.user.is_superuser:
+            return True
+        # Allow regular users to only read
+        if request.method in SAFE_METHODS:
             return True
         return False

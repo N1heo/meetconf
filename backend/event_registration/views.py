@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from .models import Conference, Role, ConfUser
 from .serializers import ConferenceSerializer, RoleSerializer, ConfUserSerializer
-from .permissions import IsSuperUser, IsSuperUserOrPostOnly
+from permissions import IsSuperUser, IsSuperUserOrPostOnly, IsSuperUserOrReadOnly
 
 
 class ConferenceViewSet(viewsets.ModelViewSet):
@@ -10,7 +10,7 @@ class ConferenceViewSet(viewsets.ModelViewSet):
     """
     queryset = Conference.objects.all()
     serializer_class = ConferenceSerializer
-    # permission_classes = [IsSuperUser]
+    permission_classes = [IsSuperUserOrReadOnly]
 
 
 class RoleViewSet(viewsets.ModelViewSet):
@@ -19,7 +19,7 @@ class RoleViewSet(viewsets.ModelViewSet):
     """
     queryset = Role.objects.all()
     serializer_class = RoleSerializer
-    # permission_classes = [IsSuperUser]
+    permission_classes = [IsSuperUserOrReadOnly]
 
 
 class ConfUserViewSet(viewsets.ModelViewSet):

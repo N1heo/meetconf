@@ -1,4 +1,5 @@
-import csv, datetime
+import csv
+import datetime
 
 from django.contrib import admin
 from django.http import HttpResponse
@@ -7,6 +8,9 @@ from .models import ConfUser, Role, Conference
 
 
 def export_to_csv(modeladmin, request, queryset):
+    """
+        A function to export a queryset to a csv file.
+    """
     opts = modeladmin.model._meta
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment;' 'filename={}.csv'.format(opts.verbose_name)
@@ -29,6 +33,9 @@ def export_to_csv(modeladmin, request, queryset):
 
 
 class ConfUserAdmin(admin.ModelAdmin):
+    """
+        Custom Admin View for Conference model.
+    """
     fields = ['name', 'email', 'conferences', 'role']
     list_display = ['id', 'name', 'email', 'get_conferences', 'role', 'reg_date']
     list_filter = ["conferences"]

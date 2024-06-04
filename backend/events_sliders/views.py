@@ -1,14 +1,13 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Gallery
-from .serializers import GallerySerializer
+from .models import EventsSlide
+from .serializers import EventsSlideSerializer
 from permissions import IsSuperUserOrReadOnly
 
 
-class GalleryViewSet(viewsets.ModelViewSet):
+class EventsSliderViewSet(viewsets.ModelViewSet):
     """
     This viewset automatically provides `list`, `retrieve`, `create`, `update`, and `destroy` actions.
     """
-    queryset = Gallery.objects.all()
-    serializer_class = GallerySerializer
+    queryset = EventsSlide.objects.all()
+    serializer_class = EventsSlideSerializer
     permission_classes = (IsSuperUserOrReadOnly,)

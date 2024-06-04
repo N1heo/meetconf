@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/event-registration/', include('event_registration.urls')),
     path('api/gallery/', include('gallery.urls')),
-    path('api/pdf_storage/', include('pdf_storage.urls')),
+    path('api/pdf-storage/', include('pdf_storage.urls')),
+    path('api/events-sliders/', include('events_sliders.urls'))
 ]
