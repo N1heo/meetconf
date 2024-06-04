@@ -5,4 +5,4 @@ from .models import Gallery
 class GallerySerializer(serializers.ModelSerializer):
     class Meta:
         model = Gallery
-        fields = ['id', 'name', 'image', 'text']
+        fields = ['id', 'name', 'image', 'text', 'year']
