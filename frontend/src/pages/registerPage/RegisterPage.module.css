@@ -63,11 +63,13 @@
     width: 430px;
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .check {
-    width: 170px;
+    width: 380px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;

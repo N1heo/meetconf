@@ -83,7 +83,6 @@ export function SliderMeets() {
             buttonText: "Join us",
             imgSrc: awards,
         },
-        // Add more slides as needed
     ];
 
     return (
