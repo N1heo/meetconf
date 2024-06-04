@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "MEET.STUDENTS",
+      "description": "A conference for students to present their research, innovations, and ideas in medicine, engineering, education, and technology.",
+      "url": "/path/to/students.jpg",
+      "year": "2023"
+    },
+    {
+      "id": 2,
+      "title": "MEET.SCIENCE",
+      "description": "A scientific conference with presentations, seminars, and discussions on cutting-edge research and developments in various fields.",
+      "url": "/path/to/science.jpg",
+      "year": "2023"
+    },
+    {
+      "id": 3,
+      "title": "MEET.TALKING",
+      "description": "An engaging session featuring non-academic science communication in the form of short presentations by scientists.",
+      "url": "/path/to/talking.jpg",
+      "year": "2022"
+    },
+    {
+      "id": 4,
+      "title": "MEET.EXPO",
+      "description": "An exhibition showcasing innovative projects, products, and services in medicine, engineering, education, and technology.",
+      "url": "/path/to/expo.jpg",
+      "year": "2022"
+    },
+    {
+      "id": 5,
+      "title": "MEET.TALKING",
+      "description": "An engaging session featuring non-academic science communication in the form of short presentations by scientists.",
+      "url": "/path/to/talking.jpg",
+      "year": "2021"
+    },
+    {
+      "id": 6,
+      "title": "MEET.EXPO",
+      "description": "An exhibition showcasing innovative projects, products, and services in medicine, engineering, education, and technology.",
+      "url": "/path/to/expo.jpg",
+      "year": "2021"
+    }
+  ]
+}

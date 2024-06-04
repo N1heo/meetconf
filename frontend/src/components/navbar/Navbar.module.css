@@ -1,0 +1,205 @@
+.navbar {
+    position: fixed;
+    background-color: #333333;
+    z-index: 2;
+    width: 100vw;
+    border-bottom: 1px solid rgb(87, 86, 86);
+}
+
+.container {
+    width: 1224px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1070px) {
+    .container {
+        width: 800px;
+    }
+}
+
+@media (max-width: 880px) {
+    .container {
+        width: 700px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 600px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 550px;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 530px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media (max-width: 410px) {
+    .container {
+        width: 350px;
+    }
+}
+
+@media (max-width: 361px) {
+    .container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 340px) {
+    .container {
+        width: 250px;
+    }
+}
+
+.navbar_inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+@media (max-width: 450px) {
+    .navbar_inner {
+        height: 50px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar_inner {
+        height: 40px;
+    }
+}
+
+.navbar_inner img {
+    width: 170px;
+    height: 50px;
+}
+
+@media (max-width: 800px) {
+    .navbar_inner img {
+        width: 140px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 540px) {
+    .navbar_inner img {
+        width: 120px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar_inner img {
+        width: 100px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar_inner img {
+        width: 70px;
+        height: 25px;
+    }
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+
+@media (max-width: 800px) {
+    .sections {
+        width: 300px;
+    }
+}
+
+@media (max-width: 530px) {
+    .sections {
+        width: 300px;
+    }
+}
+
+@media (max-width: 450px) {
+    .sections {
+        width: 200px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sections {
+        width: 150px;
+    }
+}
+
+.navlink {
+    padding: 6px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-size: 16px;
+    transition: .2s;
+    color: white;
+}
+
+
+@media (max-width: 650px) {
+    .navlink {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 540px) {
+    .navlink {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .navlink {
+        font-size: 12px;
+        padding: 3px 10px
+    }
+}
+
+@media (max-width: 360px) {
+    .navlink {
+        font-size: 10px;
+        padding: 3px 5px
+    }
+}
+
+.navlink:hover {
+    background-color: #4d4b4b;
+}
+
+.logo {
+    cursor: pointer;
+}

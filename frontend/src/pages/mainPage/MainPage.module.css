@@ -1,0 +1,567 @@
+.container {
+    width: 1224px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1224px) {
+    .container {
+        width: 100vw;
+    }
+}
+
+.main {
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+@media (max-width: 500px) {
+    .main {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 350px) {
+    .main {
+        padding-top: 40px;
+    }
+}
+
+.header {
+    position: relative;
+    margin-bottom: 50px;
+    height: 500px;
+    border-bottom: 1px solid #575656;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 5px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+@media (max-width: 1300px) {
+    .header {
+        height: 423px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header {
+        height: 406px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        height: 366px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header {
+        height: 283px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        height: 233px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        height: 173px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header {
+        height: 135px;
+    }
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header_inner {
+    background: url("./img/conference.png") no-repeat right 550px center;
+    background-size: 900px;
+    height: 500px;
+    width: 1500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1500px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 530px center;
+        background-size: 900px;
+        width: 1400px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 430px center;
+        background-size: 900px;
+        width: 1300px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 380px top;
+        background-size: 750px;
+        width: 1100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 350px top;
+        background-size: 720px;
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 310px top;
+        background-size: 650px;
+        width: 950px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 310px top;
+        background-size: 500px;
+        width: 800px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 300px top;
+        background-size: 410px;
+        width: 700px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 250px top;
+        background-size: 410px;
+        width: 650px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 200px top;
+        background-size: 410px;
+        width: 600px;
+        height: 230px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 160px top;
+        background-size: 410px;
+        width: 550px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 160px top;
+        background-size: 350px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 180px top 30px ;
+        background-size: 250px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 120px top 30px ;
+        background-size: 250px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header_inner {
+        background: url("./img/conference.png") no-repeat right 130px top 20px ;
+        background-size: 200px;
+        width: 330px;
+    }
+}
+
+.header_text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 1200px;
+    margin-top: 70px;
+    color: white;
+}
+
+@media (max-width: 1500px) {
+    .header_text {
+        width: 1200px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .header_text {
+        width: 1100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header_text {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header_text {
+        width: 850px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header_text {
+        width: 750px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header_text {
+        width: 630px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header_text {
+        width: 600px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header_text {
+        width: 550px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header_text {
+        width: 550px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .header_text {
+        width: 500px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header_text {
+        width: 400px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header_text {
+        width: 350px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header_text {
+        width: 300px;
+        margin-top: 10px;
+    }
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    width: 500px;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.header_content h1 {
+    width: 700px;
+}
+
+.header_content p {
+    font-size: 18px;
+}
+
+@media (max-width: 1300px) {
+    .header_content {
+        font-size: 40px;
+    }
+
+    .header_content h1 {
+        width: 600px;
+    }
+
+    .header_content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header_content {
+        font-size: 35px;
+        width: 400px;
+    }
+
+    .header_content h1 {
+        width: 600px;
+    }
+
+    .header_content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header_content {
+        font-size: 28px;
+        width: 300px;
+    }
+
+    .header_content h1 {
+        width: 500px;
+    }
+
+    .header_content p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header_content {
+        font-size: 20px;
+        width: 300px;
+    }
+
+    .header_content h1 {
+        width: 300px;
+    }
+
+    .header_content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header_content {
+        font-size: 18px;
+        width: 300px;
+    }
+
+    .header_content h1 {
+        width: 250px;
+    }
+
+    .header_content p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .header_content {
+        font-size: 16px;
+        width: 250px;
+    }
+
+    .header_content h1 {
+        width: 200px;
+    }
+
+    .header_content p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header_content {
+        font-size: 13px;
+        width: 200px;
+    }
+
+    .header_content h1 {
+        width: 200px;
+    }
+
+    .header_content p {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header_content {
+        font-size: 10px;
+        width: 130px;
+    }
+
+    .header_content h1 {
+        width: 150px;
+    }
+
+    .header_content p {
+        font-size: 7px;
+    }
+}
+
+/****************SliderOfLogos***********************/
+
+.logos {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 900px) {
+    .logos {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logos {
+        margin-bottom: 5px;
+    }
+}
+
+.logos_inner {
+    height: 200px;
+    background-color: #F7931E;
+}
+
+.logos_inner img {
+    width: 100px;
+}
+
+/****************SliderOfMeets***********************/
+
+.meets {
+    position: relative;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+
+@media (max-width: 900px) {
+    .meets {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .meets {
+        margin-bottom: 5px;
+    }
+}
+
+.meets_inner {
+    width: 1080px;
+    margin: 0px auto;
+}
+
+@media (max-width: 1240px) {
+    .meets_inner {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 1160px) {
+    .meets_inner {
+        width: 800px;
+    }
+}
+
+@media (max-width: 900px) {
+    .meets_inner {
+        width: 700px;
+    }
+}
+
+@media (max-width: 800px) {
+    .meets_inner {
+        width: 600px;
+    }
+}
+
+@media (max-width: 680px) {
+    .meets_inner {
+        width: 500px;
+    }
+}
+
+@media (max-width: 580px) {
+    .meets_inner {
+        width: 450px;
+    }
+}
+
+@media (max-width: 530px) {
+    .meets_inner {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .meets_inner {
+        width: 300px;
+    }
+}
+
+@media (max-width: 380px) {
+    .meets_inner {
+        width: 250px;
+    }
+}
+
+/****************Gallery***********************/
+
+.gallery {
+    position: relative;
+    margin-bottom: 50px;
+}

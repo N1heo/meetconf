@@ -1,0 +1,330 @@
+.footer {
+    position: relative;
+    background-color: #333333;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    padding: 20px;
+    border-top: 1px solid rgb(87, 86, 86);
+}
+
+.container {
+    width: 1224px;
+    margin: 0 auto;
+}
+
+.footer_inner {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer_inner h4 {
+    color: #F7931E;
+}
+
+.logo {
+    width: 300px;
+}
+
+.logo img {
+    width: 225px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-bottom: 13px;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 110px;
+}
+
+.logos img:hover {
+    cursor: pointer;
+}
+
+.inst {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.yt {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.tg {
+    width: 30px;
+    height: 30px;
+}
+
+.kgma, .alatoo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .container {
+        width: 900px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    
+    h4 {
+        margin-bottom: 13px;
+    }
+
+    .logos {
+        width: 110px;
+    }
+    
+}
+
+@media (max-width: 930px) {
+    .container {
+        width: 700px;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    .logo img {
+        width: 170px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 8px;
+        margin-bottom: 10px;
+    }
+    
+    h4 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .logos {
+        width: 80px;
+    }
+
+    .inst {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+    }
+    
+    .yt {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+    }
+    
+    .tg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .kgma, .alatoo {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    
+}
+
+@media (max-width: 720px) {
+    .container {
+        width: 500px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 130px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 6px;
+        margin-bottom: 10px;
+    }
+    
+    h4 {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .logos {
+        width: 70px;
+    }
+
+    .inst {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+    }
+    
+    .yt {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+    }
+    
+    .tg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .kgma, .alatoo {
+        width: 25px;
+        height: 25px;
+        border-radius: 10px;
+    }
+    
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 400px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 130px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 6px;
+        margin-bottom: 10px;
+    }
+    
+    h4 {
+        font-size: 10px;
+        margin-bottom: 8px;
+    }
+
+    .logos {
+        width: 50px;
+    }
+
+    .inst {
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+    }
+    
+    .yt {
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+    }
+    
+    .tg {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .kgma, .alatoo {
+        width: 25px;
+        height: 25px;
+        border-radius: 10px;
+    }
+    
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 300px;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 6px;
+        margin-bottom: 10px;
+    }
+    
+    h4 {
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+
+    .logos {
+        width: 50px;
+    }
+
+    .inst {
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+    }
+    
+    .yt {
+        width: 15px;
+        height: 15px;
+        border-radius: 6px;
+    }
+    
+    .tg {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .kgma, .alatoo {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+    }
+    
+}
