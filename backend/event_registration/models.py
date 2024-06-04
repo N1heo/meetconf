@@ -25,6 +25,9 @@ class ConfUser(models.Model):
     def __str__(self):
         return self.name
 
+    def get_conferences(self):
+        return ", ".join([c.name for c in self.conferences.all()])
+
     class Meta:
         ordering = ['reg_date']
 

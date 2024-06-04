@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Archive, Program
+
+admin.site.register(Archive)
+admin.site.register(Program)

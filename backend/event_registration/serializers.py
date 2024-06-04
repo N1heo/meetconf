@@ -27,5 +27,6 @@ class ConfUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ConfUser
-        fields = ['id', 'name', 'email', 'conferences', 'role']
+        fields = ['id', 'name', 'email', 'conferences', 'role', 'reg_date']
         depth = 1
+
