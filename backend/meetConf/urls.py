@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import api_redirect, api_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', api_redirect, name='index-redirect'),
+    path('api/', api_index, name='api-index'),
     path('api/event-registration/', include('event_registration.urls')),
     path('api/gallery/', include('gallery.urls')),
     path('api/pdf-storage/', include('pdf_storage.urls')),
