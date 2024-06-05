@@ -28,4 +28,5 @@ class ConfUserViewSet(viewsets.ModelViewSet):
     """
     queryset = ConfUser.objects.all()
     serializer_class = ConfUserSerializer
+    permission_classes = [IsSuperUserOrPostOnly]
 
