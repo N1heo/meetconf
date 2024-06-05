@@ -31,14 +31,16 @@
 }
 
 .slider {
-  width: 1080px;
+  width: 90%;
+  max-width: 1080px;
   margin: 0 auto;
   position: relative;
 }
 
 .slide {
-  width: 1080px !important;
-  height: 500px;
+  width: 100%;
+  max-width: 1080px !important;
+  /* height: 500px; */
   background-color: #333333;
   border: 1px solid #575656;
   position: relative;
