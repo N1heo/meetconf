@@ -4,7 +4,6 @@ import axios from 'axios';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import classes from './SliderGallery.module.css';
 
-
 function SampleNextArrow(props) {
   const { style, onClick } = props;
   return (
@@ -40,19 +39,38 @@ export function SliderGallery() {
   useEffect(() => {
     axios.get('http://127.0.0.1:8000/api/gallery/images/')
       .then(response => {
-        setImages(response.data);
-        setFilteredImages(response.data);
-        const uniqueYears = [...new Set(response.data.map(img => img.year))];
-        setYears(['All', ...uniqueYears]);
+        const data = response.data.results;
+        setImages(data);
+        setFilteredImages(data);
+        const uniqueYears = ['All', ...new Set(data.map(img => img.year))];
+        setYears(uniqueYears);
+      })
+      .catch(error => {
+        console.error('Error fetching images:', error);
       });
   }, []);
 
-  const handleYearChange = (year) => {
-    setSelectedYear(year);
-    if (year === 'All') {
+  useEffect(() => {
+    console.log("Selected Year:", selectedYear);
+    console.log("All Images:", images);
+    if (selectedYear === 'All') {
       setFilteredImages(images);
     } else {
-      setFilteredImages(images.filter(img => img.year === year));
+      const filtered = images.filter(img => String(img.year) === selectedYear);
+      console.log("Filtered Images:", filtered);
+      setFilteredImages(filtered);
+    }
+  }, [selectedYear, images]);
+
+  const handleYearChange = (year) => {
+    setSelectedYear(year);
+  };
+
+  const calculateSlidesToShow = (numberOfImages) => {
+    if (numberOfImages <= 1) {
+      return numberOfImages;
+    } else {
+      return 1;
     }
   };
 
@@ -60,10 +78,10 @@ export function SliderGallery() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: calculateSlidesToShow(filteredImages.length),
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -78,19 +96,21 @@ export function SliderGallery() {
         </select>
       </div>
 
-      <div className={classes.slider}>
-        <Slider {...settings}>
-          {filteredImages.map(image => (
-            <div key={image.id} className={classes.slide}>
-              <img src={image.url} alt={image.title} className={classes.slide_image}/>
-              <div className={classes.slide_caption}>
-                <h3>{image.title}</h3>
-                <p>{image.description}</p>
+      {filteredImages.length > 0 && (
+        <div className={classes.slider}>
+          <Slider {...settings}>
+            {filteredImages.map(image => (
+              <div key={image.id} className={classes.slide}>
+                <img src={image.image} alt={image.name} className={classes.slide_image}/>
+                <div className={classes.slide_caption}>
+                  <h3>{image.name}</h3>
+                  <p>{image.text}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+            ))}
+          </Slider>
+        </div>
+      )}
     </div>
   );
 }
