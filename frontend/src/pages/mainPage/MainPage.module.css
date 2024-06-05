@@ -491,12 +491,28 @@
 @media (max-width: 900px) {
     .meets {
         margin-bottom: 30px;
+        height: 300px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .meets {
-        margin-bottom: 5px;
+        margin-bottom: 0px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 530px) {
+    .meets {
+        margin-bottom: 0px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .meets {
+        margin-bottom: 0px;
+        height: 220px;
     }
 }
 
