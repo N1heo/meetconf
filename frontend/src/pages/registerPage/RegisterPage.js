@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import classes from './RegisterPage.module.css';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export function RegisterPage() {
     const [formData, setFormData] = useState({
@@ -13,7 +14,9 @@ export function RegisterPage() {
     const [error, setError] = useState('');
     const [conferences, setConferences] = useState([]);
 
-    // Fetch conferences data when the component mounts
+    // Initialize useNavigate
+    const navigate = useNavigate();
+
     useEffect(() => {
         const fetchConferences = async () => {
             try {
@@ -44,14 +47,13 @@ export function RegisterPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError('');  // Clear previous errors
-
-        // Ensure required fields are not empty
+        setError('');
+    
         if (!formData.name || !formData.email || !formData.role || formData.conferences.length === 0) {
             setError('Please fill out all fields and select at least one conference.');
             return;
         }
-
+    
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/event-registration/users/', formData, {
                 headers: {
@@ -59,9 +61,17 @@ export function RegisterPage() {
                 }
             });
             console.log('Success:', response.data);
+            alert('Registration successful!');
+            setFormData({
+                name: '',
+                email: '',
+                role: '',
+                conferences: [],
+            });
+            navigate('/');
         } catch (error) {
             console.error('Error:', error.response.data);
-            setError('Failed to register. Please check the form and try again.');
+            setError('Failed to register. Email already exists or fields werent specified.');
         }
     }
 
@@ -71,7 +81,6 @@ export function RegisterPage() {
                 <div className={classes.register_inner}>
                     <div className={classes.register_form}>
                         <h2>Registration Form</h2>
-                        {error && <div className={classes.error}>{error}</div>}
                         <form onSubmit={handleSubmit}>
                             <div className={classes.form_group}>
                                 <label htmlFor='name'>Name:</label>
@@ -109,6 +118,7 @@ export function RegisterPage() {
                                 </div>
                             </div>
                             <button type='submit'>Register</button>
+                            {error && <div className={classes.error}>{error}</div>}
                         </form>
                     </div>
                 </div>
