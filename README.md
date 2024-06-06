@@ -112,6 +112,8 @@ DATABASE_USER
 DATABASE_PASSWORD
 ```
 
+Note: in the ```backend/meetConf/settings.py``` in the ```DATABASES``` specify the PORT and HOST if different. 
+
  and register at [Cloudinary.com.](https://cloudinary.com/)
 Sign up or log in to your account. Go to the Dashboard from your account menu. In the Account Details section, note down:
 
@@ -129,7 +131,17 @@ To set up the database and run the server, follow these steps:
    python manage.py migrate
    ```
 
-2. Start the development server:
+2. Make migrations for the apps:
+   ```bash
+   py manage.py makemigrations event_registration events_sliders gallery pdf_storage
+   ```
+
+3. Apply the migrations again:
+   ```bash
+   python manage.py migrate
+   ```
+
+4. Start the development server:
    ```bash
    python manage.py runserver
    ```
