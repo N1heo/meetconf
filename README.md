@@ -92,6 +92,34 @@ Once the virtual environment is activated, install the necessary dependencies fr
 pip install -r requirements.txt
 ```
 
+### Step 2.5: Create .env file
+Create and fill the .env file with following
+```
+DATABASE_NAME=database_name
+DATABASE_USER=user_name
+DATABASE_PASSWORD=password
+
+CLOUD_NAME=cloud_name
+API_KEY=api_key
+API_SECRET=api_secret
+```
+
+To get this credentials create a PostgreSQL database(recommended version - 15), with this you'll have
+```
+DATABASE_NAME
+DATABASE_USER
+DATABASE_PASSWORD
+```
+
+ and register at [Cloudinary.com.](https://cloudinary.com/)
+Sign up or log in to your account. Go to the Dashboard from your account menu. In the Account Details section, note down:
+
+    CLOUD_NAME
+    API_KEY
+    API_SECRET
+
+Also make sure to go to ```Settings > Product environment settings > Security``` and at the end of the page check the box "Allow delivery of PDF and ZIP files."
+
 ### Step 3: Apply Migrations and Run the Server
 To set up the database and run the server, follow these steps:
 
@@ -106,10 +134,3 @@ To set up the database and run the server, follow these steps:
    ```
 
 Your Django project should now be running on `http://127.0.0.1:8000/`.
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
