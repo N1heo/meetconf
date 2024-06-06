@@ -64,11 +64,12 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Backend
+Recommended Python version is 3.10
 
 ## Installation Guide
 
 ### Step 1: Create a Virtual Environment
-First, you need to create a virtual environment. This helps to keep the dependencies required by different projects in separate places.
+First, you need to create a virtual environment. This helps to keep the dependencies required by different projects in separate places. 
 
 ```bash
 python -m venv env
